@@ -83,22 +83,3 @@ Installation
 6. (Optional) In the project directory, in ./configs/ create the file `config.json` by copying over `example.config.json` and editing as required.
    In the current version this is only relevant for the unit tests.
 7. Use the tool.
-
-
-Tests - currently the number of tests is significantly reduced for this repo.
------
-Before running unit tests make sure to set up your `config.json`. Use the provided `configs/example.config.json`, rename it to `configs/config.json` and update the `USER_NAME` and `MAIN_TEST_PATH` variables. This file will not be version-controlled.
-The tests can be executed using `Unittest`:
-```
-python -m unittest
-```
-
-Or using Pytest:
-```
-python -m pytest unittest_reinvent
-```
-
-Integration tests are decorated with `@pytest.mark.integration`. You can easily skip integration tests using `pytest` mark expression (`-m` argument):
-```
-python -m pytest -m "not integration" --strict-markers unittest_reinvent/
-```
